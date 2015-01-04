@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="img/favicon-prompt.gif" type="image/x-icon">
+	<title>{{{ title }}}</title>
+</head>
+<body ng-app="chatApp">

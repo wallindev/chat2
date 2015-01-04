@@ -1,0 +1,8 @@
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-locale/angular-locale_sv-se.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
