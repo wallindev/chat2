@@ -16,7 +16,7 @@ var publicDir	= __dirname + '/../public'
 , routesDir		= __dirname + '/../routes';
 
 // Listening port
-var httpPort	= process.env.PORT || 80;
+var httpPort	= process.env.PORT || 8080;
 
 // Database constants
 var SERVER		= 'localhost'
