@@ -115,6 +115,14 @@ var chatApp = function() {
 							func.handleError(new Error("Couldn't open database"));
 							//func.handleError("Couldn't open database", __file, __line, __stack);
 						}
+
+						// Authenticate user
+						success = await(db.authenticate(conf.DBUSER, conf.DBPASS, defer()));
+						if (success) {
+							func.prodLog("User '" + conf.DBUSER + "' authenticated on '" + conf.DBSERVER + "'.");
+						} else {
+							func.handleError(new Error("Couldn't authenticate user '" + conf.DBUSER + "' on '" + conf.DBSERVER + "'."));
+						}
 					}
 
 					// Insert the new documents
@@ -180,6 +188,14 @@ var chatApp = function() {
 					} else {
 						func.handleError(new Error("Couldn't open database"));
 						//func.handleError("Couldn't open database", __file, __line, __stack);
+					}
+
+					// Authenticate user
+					success = await(db.authenticate(conf.DBUSER, conf.DBPASS, defer()));
+					if (success) {
+						func.prodLog("User '" + conf.DBUSER + "' authenticated on '" + conf.DBSERVER + "'.");
+					} else {
+						func.handleError(new Error("Couldn't authenticate user '" + conf.DBUSER + "' on '" + conf.DBSERVER + "'."));
 					}
 				}
 

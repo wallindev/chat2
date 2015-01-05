@@ -3,9 +3,8 @@
  * Globals
  *
  */
-var DEVMODE		= true;
-var PRODMODE	= !DEVMODE;
-/*var VIEW_HTML		= true;*/
+var DEVMODE		= true
+, PRODMODE		= true; //!DEVMODE;
 
 // App title
 var appTitle	= "Wallindev's awesome Node.js Chat App!";
@@ -85,7 +84,6 @@ Object.defineProperty(global, '__file', {
 module.exports = {
 	DEVMODE:		DEVMODE,
 	PRODMODE:		PRODMODE,
-	/*VIEW_HTML:		VIEW_HTML,*/
 	appTitle:		appTitle,
 	publicDir:		publicDir,
 	templateDir:	templateDir,
