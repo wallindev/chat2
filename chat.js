@@ -60,10 +60,10 @@ var chatApp = function() {
 	 *
 	 */
 	// With --noauth
-	var connString = 'mongodb://' + conf.DBSERVER + '/' + conf.DBNAME;
+	//var connString = 'mongodb://' + conf.DBSERVER + '/' + conf.DBNAME;
 	// With --auth
-	//var connString = 'mongodb://' + conf.DBUSER + ':' + conf.DBPASS + '@' + conf.DBSERVER + '/' + conf.DBNAME;
-	func.devLog(connString);
+	var connString = 'mongodb://' + conf.DBUSER + ':' + conf.DBPASS + '@' + conf.DBSERVER + '/' + conf.DBNAME;
+	func.devLog('connString: ' + connString);
 
 	// Testing debugger
 	//debugger;

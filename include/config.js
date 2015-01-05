@@ -3,7 +3,7 @@
  * Globals
  *
  */
-var DEVMODE		= false;
+var DEVMODE		= true;
 var PRODMODE	= !DEVMODE;
 /*var VIEW_HTML		= true;*/
 
@@ -43,6 +43,7 @@ Password
 dl5z_3yHUrgS
 
 Version 2.4
+db.addUser( { user: "admin", pwd: "dl5z_3yHUrgS", roles: [ "readWrite" ] } )
 db.addUser( { user: "chatUser", pwd: "chatPassword", roles: [ "readWrite" ] } )
 db.addUser( { user: "UserAdmin", pwd: "UserAdmin", roles: [ "userAdminAnyDatabase" ] } )
 
