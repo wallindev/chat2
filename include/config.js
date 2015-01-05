@@ -61,6 +61,7 @@ module.exports = {
 	templateDir:	templateDir,
 	routesDir:		routesDir,
 	httpPort:		httpPort,
+	ipAddress:		ipAddress,
 	SERVER:			SERVER,
 	DBNAME:			DBNAME,
 	DBUSER:			DBUSER,

@@ -112,7 +112,7 @@ var chatApp = function() {
 						if (success) {
 							func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' opened.");
 						} else {
-							func.handleError("Couldn't open database");
+							func.handleError(new Error("Couldn't open database"));
 							//func.handleError("Couldn't open database", __file, __line, __stack);
 						}
 					}
@@ -175,7 +175,7 @@ var chatApp = function() {
 					if (success) {
 						func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' opened.");
 					} else {
-						func.handleError("Couldn't open database");
+						func.handleError(new Error("Couldn't open database"));
 						//func.handleError("Couldn't open database", __file, __line, __stack);
 					}
 				}

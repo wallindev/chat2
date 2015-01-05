@@ -33,11 +33,7 @@ var handleError = function(error, file, line, stack) {
 	if (!stack)
 		stack = error.stack;
 
-	if (typeof error === 'string') {
-		console.error(new Date() + ":\nException thrown:\n", error);
-	} else {
-		console.error(new Date() + ":\nException of type '" + error.name + "' thrown:\n", error.message + "\n", "Stack:\n" + error.stack);
-	}
+	console.error(new Date() + ":\nException of type '" + error.name + "' thrown:\n", error.message + "\n", "Stack:\n" + error.stack);
 	//console.error(new Date() + ":\nError of type '" + error.name + "' in file '" + file + "' on line " + line + ":\n", error.message + "\n", "Stack:\n" + stack);
 	//process.exit(1);
 }
