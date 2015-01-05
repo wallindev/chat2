@@ -157,8 +157,11 @@ var chatApp = function() {
 		}
 
 		// Welcome user
+		var welcomeMsg = 'Http port: ' + conf.httpPort;
+		welcomeMsg += '';
+		//var welcomeMsg = 'Välkommen till chatten! =)';
 		func.sendStatus({
-			message:	'Välkommen till chatten! =)',
+			message:	welcomeMsg,
 			type:		'primary',
 			which:		'status',
 			clear:		false
