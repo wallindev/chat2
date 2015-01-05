@@ -12,7 +12,7 @@ var chatApp = function() {
 	// Dependency modules
 	var express		= require('express')
 	, app			= express()
-	, server		= app.listen(conf.httpPort)
+	, server		= app.listen(conf.httpPort, conf.ipAddress)
 	, sockets		= require('socket.io').listen(server).sockets
 	, mongo			= require('mongodb').MongoClient
 	, sync 			= require('synchronize') // To get rid of callbacks (still non-blocking for code outside fibers)
@@ -91,7 +91,8 @@ var chatApp = function() {
 				func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' closed.");
 			}
 		} catch (e) {
-			func.handleError(e, __file, __line);
+			func.handleError(e);
+			//func.handleError(e, __file, __line);
 		}
 		// End time logging
 		console.timeEnd("start");
@@ -111,7 +112,8 @@ var chatApp = function() {
 						if (success) {
 							func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' opened.");
 						} else {
-							func.handleError("Couldn't open database", __file, __line, __stack);
+							func.handleError("Couldn't open database");
+							//func.handleError("Couldn't open database", __file, __line, __stack);
 						}
 					}
 
@@ -129,7 +131,8 @@ var chatApp = function() {
 						func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' closed.");
 					}
 				} catch (e) {
-					func.handleError(e, __file, __line);
+					func.handleError(e);
+					//func.handleError(e, __file, __line);
 				}
 				// End time logging
 				console.timeEnd("save loop");
@@ -172,7 +175,8 @@ var chatApp = function() {
 					if (success) {
 						func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' opened.");
 					} else {
-						func.handleError("Couldn't open database", __file, __line, __stack);
+						func.handleError("Couldn't open database");
+						//func.handleError("Couldn't open database", __file, __line, __stack);
 					}
 				}
 
@@ -208,7 +212,8 @@ var chatApp = function() {
 				// Send users array to client
 				socket.emit('listUsers', users);
 			} catch (e) {
-				func.handleError(e, __file, __line);
+				func.handleError(e);
+				//func.handleError(e, __file, __line);
 			}
 			// End time logging
 			console.timeEnd("client connection");

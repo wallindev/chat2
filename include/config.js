@@ -15,8 +15,9 @@ var publicDir	= __dirname + '/../public'
 , templateDir	= __dirname + '/../views'
 , routesDir		= __dirname + '/../routes';
 
-// Listening port
-var httpPort	= process.env.PORT || 8080;
+// OpenShift node.js port and IP address
+var httpPort	= process.env.OPENSHIFT_NODEJS_PORT  || 8080
+, ipAddress		= process.env.OPENSHIFT_NODEJS_IP  || "127.0.0.1";
 
 // Database constants
 var SERVER		= 'localhost'
