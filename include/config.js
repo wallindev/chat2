@@ -16,15 +16,40 @@ var publicDir	= __dirname + '/../public'
 , routesDir		= __dirname + '/../routes';
 
 // OpenShift node.js port and IP address
-var httpPort	= process.env.OPENSHIFT_NODEJS_PORT  || 3000
+var httpPort	= process.env.OPENSHIFT_NODEJS_PORT  || 8080
 , ipAddress		= process.env.OPENSHIFT_NODEJS_IP  || "127.0.0.1";
 
 // Database constants
 var DBSERVER	= process.env.OPENSHIFT_MONGODB_DB_HOST || "127.0.0.1"
 , DBPORT		= process.env.OPENSHIFT_MONGODB_DB_PORT || 27017
-, DBNAME		= process.env.OPENSHIFT_MONGODB_DB_NAME || 'chat'
-, DBUSER		= process.env.OPENSHIFT_MONGODB_DB_USERNAME || 'chatUser'
-, DBPASS		= process.env.OPENSHIFT_MONGODB_DB_PASSWORD || "chatUser";
+, DBNAME		= 'nodejs'
+, DBUSER		= 'admin'
+, DBPASS		= 'dl5z_3yHUrgS';
+//, DBNAME		= process.env.OPENSHIFT_MONGODB_DB_NAME || 'chat'
+//, DBUSER		= process.env.OPENSHIFT_MONGODB_DB_USERNAME || 'chatUser'
+//, DBPASS		= process.env.OPENSHIFT_MONGODB_DB_PASSWORD || "chatPassword";
+
+/*
+ * OpenShift Admin
+ *
+ */
+/*
+Username
+--------
+admin
+
+Password
+--------
+dl5z_3yHUrgS
+
+Version 2.4
+db.addUser( { user: "chatUser", pwd: "chatPassword", roles: [ "readWrite" ] } )
+db.addUser( { user: "UserAdmin", pwd: "UserAdmin", roles: [ "userAdminAnyDatabase" ] } )
+
+Version 2.6
+db.createUser({ user: "UserAdmin", pwd: "UserAdmin", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
+
+*/
 
 // Stack property
 Object.defineProperty(global, '__stack', {

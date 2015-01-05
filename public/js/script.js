@@ -77,7 +77,12 @@ var chatApp = angular.module('chatApp', [/*'ngSanitize'*/])
 // Socket factory
 }).factory('socket', function() {
 	var fullUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
-	//console.log(fullUrl);
+	console.log(fullUrl);
+	var socketProtocol = 'ws:'
+	, socketHost = location.hostname
+	, socketPort = 8000
+	, socketUrl = socketProtocol + '//' + socketHost + ':' + socketPort;
+	console.log(socketUrl);
 	var socket;
 	try {
 		socket = io.connect(fullUrl);
