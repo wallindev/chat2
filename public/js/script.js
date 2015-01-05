@@ -85,7 +85,7 @@ var chatApp = angular.module('chatApp', [/*'ngSanitize'*/])
 	console.log(socketUrl);
 	var socket;
 	try {
-		socket = io.connect(fullUrl);
+		socket = io.connect(socketUrl);
 	} catch (e) {
 		console.error('Error: ', e.message);
 	}
