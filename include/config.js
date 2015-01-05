@@ -16,14 +16,15 @@ var publicDir	= __dirname + '/../public'
 , routesDir		= __dirname + '/../routes';
 
 // OpenShift node.js port and IP address
-var httpPort	= process.env.OPENSHIFT_NODEJS_PORT  || 80
+var httpPort	= process.env.OPENSHIFT_NODEJS_PORT  || 3000
 , ipAddress		= process.env.OPENSHIFT_NODEJS_IP  || "127.0.0.1";
 
 // Database constants
-var SERVER		= process.env.OPENSHIFT_MONGODB_DB_HOST || "127.0.0.1"
-, DBNAME		= 'chat'
-, DBUSER		= 'chatUser'
-, DBPASS		= 'chatUser';
+var DBSERVER	= process.env.OPENSHIFT_MONGODB_DB_HOST || "127.0.0.1"
+, DBPORT		= process.env.OPENSHIFT_MONGODB_DB_PORT || 27017
+, DBNAME		= process.env.OPENSHIFT_MONGODB_DB_NAME || 'chat'
+, DBUSER		= process.env.OPENSHIFT_MONGODB_DB_USERNAME || 'chatUser'
+, DBPASS		= process.env.OPENSHIFT_MONGODB_DB_PASSWORD || "chatUser";
 
 // Stack property
 Object.defineProperty(global, '__stack', {

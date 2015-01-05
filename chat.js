@@ -59,10 +59,10 @@ var chatApp = function() {
 	 * Core database functionality
 	 *
 	 */
-	// With --auth
-	//var connString = 'mongodb://' + conf.DBUSER + ':' + conf.DBPASS + '@' + conf.SERVER + '/' + conf.DBNAME;
 	// With --noauth
-	var connString = 'mongodb://' + conf.SERVER + '/' + conf.DBNAME;
+	//var connString = 'mongodb://' + conf.DBSERVER + '/' + conf.DBNAME;
+	// With --auth
+	var connString = 'mongodb://' + conf.DBUSER + ':' + conf.DBPASS + '@' + conf.DBSERVER + '/' + conf.DBNAME;
 	func.devLog(connString);
 
 	// Testing debugger
