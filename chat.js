@@ -75,7 +75,7 @@ var chatApp = function() {
 		try {
 			// Connect to and open db
 			db = await(mongo.connect(connString, defer()));
-			func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' opened.");
+			func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.DBSERVER + "' opened.");
 
 			// Database collection
 			coll = db.collection('messages');
@@ -88,7 +88,7 @@ var chatApp = function() {
 			if (db.openCalled) {
 				// Has no result parameter in callback (as with db.open())
 				await(db.close(false, defer()));
-				func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' closed.");
+				func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.DBSERVER + "' closed.");
 			}
 		} catch (e) {
 			func.handleError(e);
@@ -110,7 +110,7 @@ var chatApp = function() {
 					if (!db.openCalled) {
 						success = await(db.open(defer()));
 						if (success) {
-							func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' opened.");
+							func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.DBSERVER + "' opened.");
 						} else {
 							func.handleError(new Error("Couldn't open database"));
 							//func.handleError("Couldn't open database", __file, __line, __stack);
@@ -128,7 +128,7 @@ var chatApp = function() {
 					if (db.openCalled) {
 						// Has no result parameter in callback (as with db.open())
 						await(db.close(false, defer()));
-						func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' closed.");
+						func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.DBSERVER + "' closed.");
 					}
 				} catch (e) {
 					func.handleError(e);
@@ -173,7 +173,7 @@ var chatApp = function() {
 				if (!db.openCalled) {
 					success = await(db.open(defer()));
 					if (success) {
-						func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' opened.");
+						func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.DBSERVER + "' opened.");
 					} else {
 						func.handleError(new Error("Couldn't open database"));
 						//func.handleError("Couldn't open database", __file, __line, __stack);
@@ -188,7 +188,7 @@ var chatApp = function() {
 				if (db.openCalled) {
 					// Has no result parameter in callback (as with db.open())
 					await(db.close(false, defer()));
-					func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.SERVER + "' closed.");
+					func.prodLog("Connection to '" + conf.DBNAME + "' on '" + conf.DBSERVER + "' closed.");
 				}
 
 				// If there are new messages that are not yet saved to db, we have to include them here
