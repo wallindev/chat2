@@ -20,7 +20,7 @@ var httpPort	= process.env.OPENSHIFT_NODEJS_PORT  || 80
 , ipAddress		= process.env.OPENSHIFT_NODEJS_IP  || "127.0.0.1";
 
 // Database constants
-var SERVER		= 'localhost'
+var SERVER		= process.env.OPENSHIFT_MONGODB_DB_HOST || "127.0.0.1"
 , DBNAME		= 'chat'
 , DBUSER		= 'chatUser'
 , DBPASS		= 'chatUser';
