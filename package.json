@@ -1,5 +1,5 @@
 {
-  "name": "NodejsChat",
+  "name": "nodejs-chat",
   "version": "1.0.0",
   "description": "Real-time chat application built with Express.js on Node.js with Socket.io, Synchronize.js and MongoDB. Uses less resources due to that new chat messages are only saved to database in bulk once a minute from memory. Client-side built with Angular.js, jQuery and Bootstrap.",
   "main": "chat.js",
@@ -11,11 +11,11 @@
     "synchronize": "^0.9.9"
   },
   "scripts": {
-    "start": "nodemon chat"
+    "start": "node chat"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/wallindev/chat"
+    "url": "https://github.com/wallindev/nodejs-chat"
   },
   "keywords": [
     "chat",
@@ -29,5 +29,5 @@
   ],
   "author": "Mikael Wallin, Wallindev",
   "license": "Free",
-  "homepage": "https://github.com/wallindev/chat"
+  "homepage": "https://github.com/wallindev/nodejs-chat"
 }

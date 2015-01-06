@@ -1,4 +1,4 @@
-# NodejsChat 
+# nodejs-chat 
 
 Real-time chat application built with Express.js on Node.js with Socket.io, Synchronize.js and MongoDB. Uses less resources due to that new chat messages are only saved to database in bulk once a minute from memory. Client-side built with Angular.js, jQuery and Bootstrap.
 
@@ -7,7 +7,7 @@ Real-time chat application built with Express.js on Node.js with Socket.io, Sync
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
 ```sh
-npm install NodejsChat --save
+npm install nodejs-chat --save
 ```
 
 ## Dependencies
