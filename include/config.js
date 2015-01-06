@@ -7,7 +7,7 @@ var DEVMODE		= false
 , PRODMODE		= true; //!DEVMODE;
 
 // App title
-var appTitle	= "Wallindev's awesome Node.js Chat App!";
+var appTitle	= "Wallindev's Node.js Chat App";
 
 // Directories
 var publicDir	= __dirname + '/../public'
