@@ -76,13 +76,17 @@ var chatApp = angular.module('chatApp', [/*'ngSanitize'*/])
 	};
 // Socket factory
 }).factory('socket', function() {
-	var fullUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
-	console.log(fullUrl);
+	var currentUrl = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '');
+	console.log(currentUrl);
+
 	var socketProtocol = 'ws:'
 	, socketHost = location.hostname
-	, socketPort = 8000
+	// If run on OpenShift server we have to set websocket port to 8000
+	// otherwise same as current http port (to avoid CORS - Cross-origin resource sharing - conflict)
+	, socketPort = (location.port) ? location.port : 8000
 	, socketUrl = socketProtocol + '//' + socketHost + ':' + socketPort;
 	console.log(socketUrl);
+
 	var socket;
 	try {
 		socket = io.connect(socketUrl);
@@ -127,7 +131,7 @@ var chatApp = angular.module('chatApp', [/*'ngSanitize'*/])
 			}
 
 			// Must use this to allow for HTML in chat message
-			// Or use custom filter!
+			// Change: Now using custom angular.js filter instead
 			/*for (var i = 0; i < $scope.messages.length; i++) {
 				$scope.messages[i].message = $sce.trustAsHtml($scope.messages[i].message);
 			}*/

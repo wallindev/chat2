@@ -116,6 +116,15 @@ var chatApp = function() {
 							//func.handleError("Couldn't open database", __file, __line, __stack);
 						}
 
+						// Checking authentication settings
+						/*
+						for (var elem in db.serverConfig.auth)
+							console.log('db.serverConfig.auth.' + elem + ': ', db.serverConfig.auth[elem]);
+
+						for (var i = 0; i < db.serverConfig.auth.length(); i++)
+							console.log(db.serverConfig.auth.get(i));
+						*/
+
 						// Authenticate user
 						success = await(db.authenticate(conf.DBUSER, conf.DBPASS, defer()));
 						if (success) {
@@ -165,9 +174,7 @@ var chatApp = function() {
 		}
 
 		// Welcome user
-		var welcomeMsg = 'Http port: ' + conf.httpPort;
-		welcomeMsg += '';
-		//var welcomeMsg = 'Välkommen till chatten! =)';
+		var welcomeMsg = 'Välkommen till chatten! =)';
 		func.sendStatus({
 			message:	welcomeMsg,
 			type:		'primary',
