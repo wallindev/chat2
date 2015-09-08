@@ -28,6 +28,6 @@
     "Hogan.js"
   ],
   "author": "Mikael Wallin, Wallindev",
-  "license": "Free",
+  "license": "MIT",
   "homepage": "https://github.com/wallindev/nodejs-chat"
 }
