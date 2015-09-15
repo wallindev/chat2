@@ -1,12 +1,12 @@
 {
   "name": "nodejs-chat",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Real-time chat application built with Express.js on Node.js with Socket.io, Synchronize.js and MongoDB. Uses less resources due to that new chat messages are only saved to database in bulk once a minute from memory. Client-side built with Angular.js, jQuery and Bootstrap.",
   "main": "chat.js",
   "dependencies": {
+    "express": "^4.10.4",
     "hjs": "^0.0.6",
     "mongodb": "^1.4.23",
-    "express": "^4.10.4",
     "socket.io": "^1.2.1",
     "synchronize": "^0.9.9"
   },
@@ -29,5 +29,5 @@
   ],
   "author": "Mikael Wallin, Wallindev",
   "license": "MIT",
-  "homepage": "https://github.com/wallindev/nodejs-chat"
+  "homepage": "https://github.com/wallindev"
 }
