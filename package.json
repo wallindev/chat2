@@ -1,33 +1,36 @@
 {
-  "name": "nodejs-chat",
+  "name": "chat2",
   "version": "0.0.1",
-  "description": "Real-time chat application built with Express.js on Node.js with Socket.io, Synchronize.js and MongoDB. Uses less resources due to that new chat messages are only saved to database in bulk once a minute from memory. Client-side built with Angular.js, jQuery and Bootstrap.",
-  "main": "chat.js",
+  "description": "Real-time chat application built with Node.js and Express.js with Socket.io, Synchronize.js and MongoDB with Mongoose. Uses less resources due to that new chat messages are only saved to database in bulk once a minute from memory. Client-side built with Angular.js, jQuery and Bootstrap.",
+  "main": "server/index.js",
   "dependencies": {
-    "express": "^4.10.4",
+    "express": "^4.16.3",
     "hjs": "^0.0.6",
-    "mongodb": "^1.4.23",
-    "socket.io": "^1.2.1",
-    "synchronize": "^0.9.9"
+    "mongodb": "^2.2.35",
+    "mongoose": "^5.0.13",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {
+    "bower": "^1.8.4"
   },
   "scripts": {
-    "start": "node chat"
+    "start": "node server"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wallindev/nodejs-chat"
+    "url": "https://github.com/wallindev/chat2"
   },
   "keywords": [
     "chat",
     "Node.js",
     "Express.js",
     "Angular.js",
-    "Synchronize.js",
     "Socket.io",
     "MongoDB",
+    "Mongoose",
     "Hogan.js"
   ],
-  "author": "Mikael Wallin, Wallindev",
+  "author": "Mikael Wallin, wallindev",
   "license": "MIT",
   "homepage": "https://github.com/wallindev"
 }
