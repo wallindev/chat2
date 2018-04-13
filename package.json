@@ -1,6 +1,6 @@
 {
   "name": "chat2",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Real-time chat application built with Node.js and Express.js with Socket.io, Synchronize.js and MongoDB with Mongoose. Uses less resources due to that new chat messages are only saved to database in bulk once a minute from memory. Client-side built with Angular.js, jQuery and Bootstrap.",
   "main": "server/index.js",
   "dependencies": {
