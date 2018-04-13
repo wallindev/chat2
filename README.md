@@ -1,5 +1,7 @@
 # chat2
 
+New version of the Node.js Real-time Chat app (formerly 'nodejs-chat') with optimized ES6 Javascript and updated dependencies
+
 Real-time chat application built with Node.js and Express.js with Socket.io and MongoDB with Mongoose. Uses less resources due to that new chat messages are only saved to database in bulk once a minute from memory. Client-side built with Angular.js, jQuery and Bootstrap.
 
 ## Installation
