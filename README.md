@@ -9,7 +9,10 @@ Real-time chat application built with Node.js and Express.js with Socket.io and 
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
 ```sh
-npm install chat2 --save
+git clone https://github.com/wallindev/chat2.git
+cd chat2
+npm install
+npm start
 ```
 
 ## Dependencies
